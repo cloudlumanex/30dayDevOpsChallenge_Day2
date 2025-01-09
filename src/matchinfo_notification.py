@@ -54,11 +54,17 @@ def lambda_handler(event, context):
     sns_topic_arn = os.getenv("SNS_TOPIC_ARN")
     sns_client = boto3.client("sns")
     
-    # Adjust for Central Time (UTC-6)
-    utc_now = datetime.now(timezone.utc)
-    central_time = utc_now - timedelta(hours=6)  # Central Time is UTC-6
-    today_date = central_time.strftime("%Y-%m-%d")
     
+   # Get current time in UTC
+    utc_now = datetime.now(timezone.utc)
+
+# Convert to Nigeria Standard Time (UTC+1)
+    nigeria_time = utc_now + timedelta(hours=1)  
+
+# Format the date as YYYY-MM-DD
+    today_date = nigeria_time.strftime("%Y-%m-%d")
+
+# Print the date for confirmation
     print(f"Fetching games for date: {today_date}")
     
     # Fetch data from the API

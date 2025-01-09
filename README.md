@@ -6,6 +6,11 @@
 This project is a real-time alert system that delivers NBA match day score notifications to subscribed users via SMS and email. It utilizes Amazon SNS, AWS Lambda, Python, Amazon EventBridge, and NBA APIs to keep sports fans informed with the latest game updates. The project showcases cloud computing concepts and effective notification delivery methods.
 
 
+![Screenshot 2025-01-08 164718](https://github.com/user-attachments/assets/003f65fd-af31-48af-964e-145019b99d11)
+
+![Screenshot 2025-01-08 165103](https://github.com/user-attachments/assets/c5a60e6e-6242-487d-8541-a5acf2b2f1cf)
+
+
 # SETUP 
 Create an SNS Topic
 1. Open the AWS Management Console.
